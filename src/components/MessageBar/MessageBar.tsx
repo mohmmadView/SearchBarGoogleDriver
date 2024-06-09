@@ -43,6 +43,7 @@ export const MessageBar: React.FC<MessageBarProps> = memo(
           'pb-2',
           'transition',
           'translate-y-0',
+
           'opacity-100',
           hide && ['opacity-0', 'invisible', 'translate-y-full'],
           props.className,
@@ -66,7 +67,6 @@ export const MessageBar: React.FC<MessageBarProps> = memo(
           />
 
           <Button
-            className=""
             isIconOnly
             color="primary"
             size="lg"

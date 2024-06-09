@@ -1,12 +1,11 @@
 import { Switch } from '@nextui-org/react'
 import { useTheme } from 'next-themes'
-import React from 'react'
+import { FC, useState } from 'react'
 import { MoonIcon } from './MoonIcon'
 import { SunIcon } from './SunIcon'
-
-export default function App() {
+const App: FC = () => {
   const { theme, setTheme } = useTheme()
-  const [isSelected, setIsSelected] = React.useState(false)
+  const [isSelected, setIsSelected] = useState<boolean>(false)
   isSelected ? setTheme('dark') : setTheme('light')
   return (
     <Switch
@@ -16,8 +15,7 @@ export default function App() {
       color="success"
       startContent={<SunIcon />}
       endContent={<MoonIcon />}
-    >
-      Dark mode
-    </Switch>
+    />
   )
 }
+export default App

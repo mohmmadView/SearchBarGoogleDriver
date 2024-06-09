@@ -1,14 +1,12 @@
 import { ChatMessages } from '@/components/ChatMessages'
 import { MessageBar } from '@/components/MessageBar'
 import { Search } from '@/components/Search'
+import ThemeSwitcher from '@/components/SwitchDarkMode/Switcher'
 import { ChatLayout } from '@/layouts/ChatLayout/Chat.layout'
 import { useSearch } from '@/queries/useSearch'
 import { ApiChatMessage, chatApi } from '@/services/api'
 import { populateDirs } from '@/utils/populateDirs.util'
 import React, { useEffect, useMemo, useState } from 'react'
-
-import { ThemeSwitcher } from '@/components/Theme/switcher'
-import { Button } from '@nextui-org/react'
 export type HomePageProps = React.HTMLProps<HTMLDivElement>
 
 export const HomePage: React.FC<HomePageProps> = ({ className, ...props }) => {
@@ -65,32 +63,8 @@ export const HomePage: React.FC<HomePageProps> = ({ className, ...props }) => {
     onSearch()
   }, [])
   return (
-    <div className={`purple-dark text-foreground bg-background`}>
+    <div className={` bg-background`}>
       <ThemeSwitcher />
-
-      <div className="flex flex-wrap gap-4 items-center">
-        <Button color="primary" variant="solid">
-          Solid
-        </Button>
-        <Button color="primary" variant="faded">
-          Faded
-        </Button>
-        <Button color="primary" variant="bordered">
-          Bordered
-        </Button>
-        <Button color="primary" variant="light">
-          Light
-        </Button>
-        <Button color="primary" variant="flat">
-          Flat
-        </Button>
-        <Button color="primary" variant="ghost">
-          Ghost
-        </Button>
-        <Button color="primary" variant="shadow">
-          Shadow
-        </Button>
-      </div>
       <ChatLayout
         messageBar={
           <MessageBar
@@ -120,6 +94,10 @@ export const HomePage: React.FC<HomePageProps> = ({ className, ...props }) => {
             message: msg.message,
           }))}
         />
+        {/* <div  className='bg-primary rounded-full p-2'>Primary </div>
+         <div  className='bg-success rounded-full p-2'>Primary </div>
+         <div  className='bg-danger rounded-full p-2'>Primary </div>
+         <div  className='bg-warning rounded-full p-2'>Primary </div> */}
       </ChatLayout>
     </div>
   )

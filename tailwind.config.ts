@@ -22,12 +22,22 @@ const config: Config = {
         light: {
           layout: {}, // light theme layout tokens
           colors: {
-            background: { 50: '##6690FF' },
+            background: '#f1e1e0',
+            primary: '#6690FF',
+            success: '#a4cbb4',
+            warning: '#1486b3',
+            danger: '#8C0327',
           }, // light theme colors
         },
         dark: {
           layout: {}, // dark theme layout tokens
-          colors: {}, // dark theme colors
+          colors: {
+            background: '#1a103d',
+            primary: '#FBB0FC',
+            success: '#88e3ff',
+            warning: '#FCB125',
+            danger: '#FF6693',
+          }, // dark theme colors
         },
         // ... custom themes
       },

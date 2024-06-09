@@ -36,11 +36,15 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   return (
     <div className={clsx('w-full', className)} {...props}>
       <form
-        className={clsx(formProps.className, 'w-full flex items-center gap-2')}
+        className={clsx(
+          formProps.className,
+          'w-full flex items-center bg-slate-500/25 gap-2',
+        )}
         onSubmit={onFormSubmit}
         {...formProps}
       >
         <Input
+          color="primary"
           placeholder="Search..."
           variant="bordered"
           radius="none"
@@ -58,7 +62,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           type="submit"
           isLoading={pending}
         >
-          <SearchIcon />
+          <SearchIcon className="success fill-gray-200" />
         </Button>
       </form>
     </div>

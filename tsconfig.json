@@ -20,7 +20,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/Theme/switcher.tsx"
+    "src/components/SwitchDarkMode/switcher.tsx",
+    "src/components/SwitchDarkMode/Switcher.jsx"
   ],
   "exclude": ["node_modules"]
 }
